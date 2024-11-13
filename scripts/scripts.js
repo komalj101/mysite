@@ -13,6 +13,7 @@ import {
   loadCSS,
   sampleRUM,
 } from './aem.js';
+import { wrapImgsInLinks } from './common.js';
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -66,6 +67,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  wrapImgsInLinks(main);
 }
 
 /**
